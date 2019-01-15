@@ -4,3 +4,5 @@
 
 # ignore files and folder in WinPE-Root directory
 WinPE-Root/*.*
+
+WinPE-Root/**/*.*
