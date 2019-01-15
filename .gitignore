@@ -4,7 +4,6 @@
 
 # ignore files and folder in WinPE-Root directory
 WinPE-Root/*.*
-
 WinPE-Root/**/*.*
 
 Add-Drivers/*.*
@@ -12,3 +11,4 @@ Add-Drivers/**/*.*
 
 Add-Scripts/*.*
 Add-Scripts/**/*.*
+
