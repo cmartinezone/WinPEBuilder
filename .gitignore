@@ -1,3 +1,6 @@
 # ignore any ISO file generated
 
 *.iso
+
+# ignore files and folder in WinPE-Root directory
+WinPE-Root/*.*
