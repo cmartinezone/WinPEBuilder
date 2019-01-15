@@ -1,0 +1,1 @@
+Any script copy to this location will be include to the mount image directory ( mount\windows\system32 )
