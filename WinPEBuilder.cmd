@@ -65,7 +65,7 @@ Dism /image:%winpe_root%\mount /Add-Package /PackagePath:"%adk_path%\Windows Pre
 Dism /image:%winpe_root%\mount /Add-Package /PackagePath:"%adk_path%\Windows Preinstallation Environment\amd64\WinPE_OCs\en-us\WinPE-SecureStartup_en-us.cab"
 
 REM Adding drivers
-rem Dism /image:%winpe_root%\mount /Add-Driver /driver:%drivers_path% /recurse
+Dism /image:%winpe_root%\mount /Add-Driver /driver:%drivers_path% /recurse
  
 REM Putting user scripts inside
 xcopy %scripts_path%  %winpe_root%\mount\Windows\System32 /r /s /e /i /y
