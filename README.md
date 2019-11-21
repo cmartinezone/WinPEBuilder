@@ -16,7 +16,7 @@ Now we are almost ready to create our WinPE:
 ##### Optional:
 - Changing the Background: Replace the the image located **"\Add-Scripts\winpe.jpg"** 800x600 px. 
 - If you want the default WinPE background remove **"\Add-Scripts\winpe.jpg"**.
-- Calling Custom Scripts. You need to edit **["\Add-Scripts\startnet.cmd"](Add-Scripts\startnet.cmd)**
+- Calling Custom Scripts. You need to edit **["\Add-Scripts\startnet.cmd"](Add-Scripts/startnet.cmd)**
 - Add your **Scripts** and **drivers** to the corresponding directories.
 ------------
 #### Run as Administrator: WinPEBuilder.bat
