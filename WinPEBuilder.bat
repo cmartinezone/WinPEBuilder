@@ -1,5 +1,5 @@
 @ECHO OFF
-title WinPE Builder v1.1 - By CarlosMartinez - GitHub @cmartinezone
+title WinPEBuilder v1.1 - By CarlosMartinez - GitHub @cmartinezone
 :: Developed by: Carlos Martinez @cmartinezone Date: 1/15/2019
 :: Updated: 11-11-2019- Composing Packages, and adding background replacement
 :: WinPEBuilder 1.0 Auto Generate WinPE ISO with drivers and script incorporate
