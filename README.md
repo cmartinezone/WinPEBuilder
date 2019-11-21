@@ -1,5 +1,5 @@
 # WinPeBuilder 1.1
-WinPEBuilder creates your Windows Environment easily and faster in a few clicks. You will be able to Generate a custom WinPE Image with the essential packages included.
+WinPEBuilder creates your Windows Environment easily and faster in a few clicks. You will be able to Generate a custom WinPE Images with the essential packages included.
 ## WinPE Packages preset:
 - ***HTA, WMI, StorageWMI, Scripting, NetFx, PowerShell, DismCmdlets, FMAPI, SecureBootCmdlets, EnhancedStorage, SecureStartup (BitLocker Support).***
 - More information about [WinPE packages](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference#winpe-optional-components-- "WinPE packages")
@@ -16,9 +16,13 @@ Now we are almost ready to create our WinPE:
 ##### Optional:
 - Changing the Background: Replace the the image located **"\Add-Scripts\winpe.jpg"**800x600 px. 
 - If you want the default WinPE background remove **"\Add-Scripts\winpe.jpg"**.
-- Calling Custom Scripts. You need to add it **["\Add-Scripts\startnet.cmd"](\Add-Scripts\startnet.cmd ""\Add-Scripts\startnet.cmd"")**
+- Calling Custom Scripts. You need to edit **["\Add-Scripts\startnet.cmd"](\Add-Scripts\startnet.cmd")**
 - Add your **Scripts** and **drivers** to the corresponding directories.
-Run as Administrator: **"WinPEBuilder.bat"**
+------------
+- ##### Run as Administrator: WinPEBuilder.bat
+Your WinPE ISO will be ready in 3 to 5 minutes.
+
+
 ## Donate:
 If this project helps, you can give me a cup of coffee ;).
 
