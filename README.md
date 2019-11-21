@@ -3,7 +3,6 @@ WinPEBuilder creates your Windows Environment easily and faster in a few clicks.
 ## WinPE Packages preset:
 - ***HTA, WMI, StorageWMI, Scripting, NetFx, PowerShell, DismCmdlets, FMAPI, SecureBootCmdlets, EnhancedStorage, SecureStartup (BitLocker Support).***
 - More information about [WinPE packages](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference#winpe-optional-components-- "WinPE packages")
-
 ## How Does it Work?
 - First, you must install the [Windows Assessment and Deployment Kit (Windows ADK)](https://docs.microsoft.com/en-us/windows-hardware/get-started/adk-install "Windows Assessment and Deployment Kit (Windows ADK)").
 - Do not Forget to Install New [Windows Preinstallation Environment (PE)](https://docs.microsoft.com/en-us/windows-hardware/get-started/adk-install#other-adk-downloads "Windows Preinstallation Environment (PE)") is available separately from the Assessment and Deployment Kit (ADK).
@@ -14,15 +13,12 @@ Now we are almost ready to create our WinPE:
     ├── Add-Scripts   # any script or file will copy to the WinPE %SYSTEM32% root 
     ├── WinPE-ISO     # The WinPE ISO will be generated on this directory and will name it 
     └── WinPE-Root    # This Directory is used to mount the WinPE image.
-
 ##### Optional:
 - Changing the Background: Replace the the image located **"\Add-Scripts\winpe.jpg"**800x600 px. 
 - If you want the default WinPE background remove **"\Add-Scripts\winpe.jpg"**.
 - Calling Custom Scripts. You need to add it **["\Add-Scripts\startnet.cmd"](\Add-Scripts\startnet.cmd ""\Add-Scripts\startnet.cmd"")**
-
 - Add your **Scripts** and **drivers** to the corresponding directories.
 Run as Administrator: **"WinPEBuilder.bat"**
-
 ## Donate:
 If this project helps, you can give me a cup of coffee ;).
 
