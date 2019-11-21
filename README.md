@@ -6,9 +6,7 @@ WinPEBuilder creates your Windows Environment easily and faster in a few clicks.
 
 ## How Does it Work?
 - First, you must install the [Windows Assessment and Deployment Kit (Windows ADK)](https://docs.microsoft.com/en-us/windows-hardware/get-started/adk-install "Windows Assessment and Deployment Kit (Windows ADK)").
-
 - Do not Forget to Install New [Windows Preinstallation Environment (PE)](https://docs.microsoft.com/en-us/windows-hardware/get-started/adk-install#other-adk-downloads "Windows Preinstallation Environment (PE)") is available separately from the Assessment and Deployment Kit (ADK).
-
 - Download the Latest Release zip file and, unzip it.
 Now we are almost ready to create our WinPE:
 ### WinPEBuilder directory layout
@@ -24,7 +22,6 @@ Now we are almost ready to create our WinPE:
 
 - Add your **Scripts** and **drivers** to the corresponding directories.
 Run as Administrator: **"WinPEBuilder.bat"**
-
 
 ## Donate:
 If this project helps, you can give me a cup of coffee ;).
