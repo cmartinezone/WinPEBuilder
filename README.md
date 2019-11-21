@@ -9,9 +9,9 @@ WinPEBuilder creates your Windows Environment easily and faster in a few clicks.
 - Download the Latest Release zip file and, unzip it.
 Now we are almost ready to create our WinPE:
 ### WinPEBuilder directory layout:
-    ├── Add-Drivers   # Add all the drivers in this location will inject to the WinPE Image.
+    ├── Add-Drivers   # Add all the drivers in this location, they will added to the WinPE Image.
     ├── Add-Scripts   # any script or file will copy to the WinPE %SYSTEM32% root 
-    ├── WinPE-ISO     # The WinPE ISO will be generated on this directory and will name it 
+    ├── WinPE-ISO     # The WinPE ISO will be generated on this directory and will named: WinPE_X64.iso 
     └── WinPE-Root    # This Directory is used to mount the WinPE image.
 ##### Optional:
 - Changing the Background: Replace the the image located **"\Add-Scripts\winpe.jpg"** 800x600 px. 
