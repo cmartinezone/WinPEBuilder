@@ -84,4 +84,4 @@ REM Unmounting and commit changes
 Dism /Unmount-Wim /MountDir:%winpe_root%\mount\ /Commit
 
 REM Creating ISO image from WinPE 
-Makewinpemedia /iso /f %winpe_root% %ISO_Path%\WinPE_X64.iso && PUASE 
+Makewinpemedia /iso /f %winpe_root% %ISO_Path%\WinPE_X64.iso && PAUSE
