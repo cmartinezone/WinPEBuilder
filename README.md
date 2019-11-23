@@ -1,5 +1,5 @@
 # WinPEBuilder 1.1
-WinPEBuilder creates your Windows Environment easily and faster in a few clicks. You will be able to Generate a custom WinPE Images with the essential packages included.
+WinPEBuilder creates your Windows PE Environment easily and faster in a few clicks. You will be able to Generate a custom WinPE Images with the essential packages included.
 ## WinPE Packages preset:
 - ***HTA, WMI, StorageWMI, Scripting, NetFx, PowerShell, DismCmdlets, FMAPI, SecureBootCmdlets, EnhancedStorage, SecureStartup (BitLocker Support).***
 - More information about [WinPE packages](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference#winpe-optional-components-- "WinPE packages")
