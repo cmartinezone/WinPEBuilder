@@ -5,18 +5,18 @@ title WinPEBuilder v1.1 - By CarlosMartinez - GitHub @cmartinezone
 :: WinPEBuilder 1.0 Auto Generate WinPE ISO with drivers and script incorporate
 
 REM Where to put Windows PE tree and ISO
-Set winpe_root=%~dp0WinPE-Root
+set winpe_root=%~dp0WinPE-Root
  
 REM ADK installation path. ADK 10 can be found here: https://docs.microsoft.com/en-us/windows-hardware/get-started/adk-install
-Set adk_path=%programfiles(x86)%\Windows Kits\10\Assessment and Deployment Kit
+set adk_path=%programfiles(x86)%\Windows Kits\10\Assessment and Deployment Kit
  
 REM Drivers tree path
-Set drivers_path=%~dp0Add-Drivers
+set drivers_path=%~dp0Add-Drivers
 
 REM User scripts location to include in new WinPE image. Scripts tree should include the modified startnet.cmd in which you can add your stuff
-Set scripts_path=%~dp0Add-Scripts
+set scripts_path=%~dp0Add-Scripts
 
-REM Directory path for finall iso generated  
+REM Directory path for finall iso generated
 set ISO_Path=%~dp0WinPE-ISO
  
 REM Calling a script which sets some useful variables 
@@ -57,7 +57,7 @@ Dism /image:%winpe_root%\mount /Add-Package /PackagePath:"%adk_path%\Windows Pre
 
 Dism /image:%winpe_root%\mount /Add-Package /PackagePath:"%adk_path%\Windows Preinstallation Environment\amd64\WinPE_OCs\WinPE-SecureBootCmdlets.cab"
 
-REM: Bitlocker startup support packages
+REM Bitlocker startup support packages
 Dism /image:%winpe_root%\mount /Add-Package /PackagePath:"%adk_path%\Windows Preinstallation Environment\amd64\WinPE_OCs\WinPE-EnhancedStorage.cab"
 Dism /image:%winpe_root%\mount /Add-Package /PackagePath:"%adk_path%\Windows Preinstallation Environment\amd64\WinPE_OCs\en-us\WinPE-EnhancedStorage_en-us.cab"
 
@@ -67,14 +67,14 @@ Dism /image:%winpe_root%\mount /Add-Package /PackagePath:"%adk_path%\Windows Pre
 REM Adding drivers
 Dism /image:%winpe_root%\mount /Add-Driver /driver:%drivers_path% /recurse
 
-Rem Remove  winpe background permisions to be alegible for replacement.
+Rem Remove WinPE background permisions to be alegible for replacement.
 TAKEOWN /F %winpe_root%\mount\Windows\System32\winpe.jpg
-ICACLS %winpe_root%\mount\Windows\System32\winpe.jpg /grant administrators:F
+ICACLS %winpe_root%\mount\Windows\System32\winpe.jpg /grant *S-1-5-32-544:F
 
 REM Copying script to the WinPE root directory
-xcopy %scripts_path%  %winpe_root%\mount\Windows\System32 /r /s /e /i /y
+xcopy %scripts_path% %winpe_root%\mount\Windows\System32 /r /s /e /i /y
 
-REM Set region Lenguage 
+REM Set region language 
 Dism /Set-AllIntl:en-US /Image:%winpe_root%\mount
 
 REM Setting the timezone. List of available timezones can be found here: http://technet.microsoft.com/en-US/library/cc749073(v=ws.10).aspx
