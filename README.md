@@ -1,29 +1,183 @@
-# WinPEBuilder 1.1
-WinPEBuilder creates your Windows PE Environment easily and faster in a few clicks. You will be able to Generate a custom WinPE Images with the essential packages included.
-## WinPE Packages preset:
-- ***HTA, WMI, StorageWMI, Scripting, NetFx, PowerShell, DismCmdlets, FMAPI, SecureBootCmdlets, EnhancedStorage, SecureStartup (BitLocker Support).***
-- More information about [WinPE packages](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference#winpe-optional-components-- "WinPE packages")
-## How Does it Work?
-- First, you must install the [Windows Assessment and Deployment Kit (Windows ADK)](https://docs.microsoft.com/en-us/windows-hardware/get-started/adk-install "Windows Assessment and Deployment Kit (Windows ADK)").
-- Do not Forget to Install New [Windows Preinstallation Environment (PE)](https://docs.microsoft.com/en-us/windows-hardware/get-started/adk-install#other-adk-downloads "Windows Preinstallation Environment (PE)") is available separately from the Assessment and Deployment Kit (ADK).
-- [Download the Latest Release zip](https://github.com/cmartinezone/WinPEBuilder/releases) file and, unzip it.
-Now we are almost ready to create our WinPE:
-### WinPEBuilder directory layout:
-    ├── Add-Drivers   # Add all the drivers in this location, they will added to the WinPE Image.
-    ├── Add-Scripts   # any script or file will copy to the WinPE %SYSTEM32% root 
-    ├── WinPE-ISO     # The WinPE ISO will be generated on this directory and will named: WinPE_X64.iso 
-    └── WinPE-Root    # This Directory is used to mount the WinPE image.
-##### Optional:
-- Changing the Background: Replace the the image located **"\Add-Scripts\winpe.jpg"** 800x600 px. 
-- If you want the default WinPE background remove **"\Add-Scripts\winpe.jpg"**.
-- Calling Custom Scripts. You need to edit **["\Add-Scripts\startnet.cmd"](Add-Scripts/startnet.cmd)**
-- Add your **Scripts** and **drivers** to the corresponding directories.
-------------
-#### Run as Administrator: WinPEBuilder.bat
-Your WinPE ISO will be ready in 2 to 5 minutes.
+# 🚀 WinPEBuilder
 
+Build a fully customized **Windows PE** environment in just a few clicks.
 
-## Donate:
-If this project helps, you can give me a cup of coffee ;).
+WinPEBuilder automates the creation of a Windows PE image with all the essential components already included, making it easy to build deployment, recovery, and troubleshooting media.
+
+---
+
+## ✨ Features
+
+- ⚡ Build a custom WinPE ISO in minutes
+- 📦 Automatically includes common WinPE optional components
+- 🔧 Inject drivers with ease
+- 📜 Copy your own PowerShell scripts and tools
+- 🎨 Customize the WinPE background
+- 💿 Perfect for deployment, recovery, and automation
+
+---
+
+# 📦 Included WinPE Components
+
+The following optional components are automatically added:
+
+- HTA
+- WMI
+- StorageWMI
+- Scripting
+- .NET Framework
+- PowerShell
+- DISM Cmdlets
+- FMAPI
+- Secure Boot Cmdlets
+- Enhanced Storage
+- Secure Startup (BitLocker Support)
+
+📖 Learn more:
+
+https://learn.microsoft.com/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference
+
+---
+
+# 🚀 Getting Started
+
+## 1. Install the Windows ADK
+
+Download and install the latest **Windows Assessment and Deployment Kit (ADK)**.
+
+https://learn.microsoft.com/windows-hardware/get-started/adk-install
+
+---
+
+## 2. Install the WinPE Add-on
+
+The **Windows PE Add-on** is distributed separately from the ADK.
+
+Make sure it is installed before using WinPEBuilder.
+
+https://learn.microsoft.com/windows-hardware/get-started/adk-install#other-adk-downloads
+
+---
+
+## 3. Download WinPEBuilder
+
+Download the latest release and extract the ZIP file.
+
+https://github.com/cmartinezone/WinPEBuilder/releases
+
+---
+
+# 📁 Project Structure
+
+```text
+WinPEBuilder
+│
+├── Add-Drivers      # Drivers injected into the WinPE image
+├── Add-Scripts      # Files copied to %SystemRoot%\System32
+├── WinPE-ISO        # Generated WinPE_X64.iso
+└── WinPE-Root       # Temporary WinPE mount directory
+````
+
+---
+
+# ⚙️ Customization
+
+## 🎨 Change the Background
+
+Replace:
+
+```text
+Add-Scripts\winpe.jpg
+```
+
+Recommended size:
+
+```text
+800 × 600
+```
+
+To restore the default WinPE background, simply delete:
+
+```text
+Add-Scripts\winpe.jpg
+```
+
+---
+
+## 📜 Run Custom Scripts
+
+Edit:
+
+```text
+Add-Scripts\startnet.cmd
+```
+
+to launch your own applications, PowerShell scripts, or automation when WinPE starts.
+
+---
+
+## 🚗 Add Drivers
+
+Copy all drivers into:
+
+```text
+Add-Drivers
+```
+
+They will automatically be injected during the build process.
+
+---
+
+## 📂 Add Scripts & Tools
+
+Place any scripts, executables, or supporting files inside:
+
+```text
+Add-Scripts
+```
+
+Everything in this folder will be copied to:
+
+```text
+%SystemRoot%\System32
+```
+
+---
+
+# ▶️ Build the ISO
+
+Run:
+
+```text
+WinPEBuilder.bat
+```
+
+> **Important:** Run as **Administrator**.
+
+The build usually completes in **2–5 minutes**.
+
+Your finished ISO will be located at:
+
+```text
+WinPE-ISO\WinPE_X64.iso
+```
+
+---
+
+# ❤️ Support the Project
+
+If WinPEBuilder saves you time, consider buying me a coffee ☕.
+
+**PayPal Donation**
 
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5NWDHDEXV9582&source=url)
+
+---
+
+## ⭐ Star the Project
+
+If you find WinPEBuilder useful, please consider giving the repository a ⭐ on GitHub.
+It helps others discover the project and motivates future improvements.
+
+```
+```
