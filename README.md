@@ -90,7 +90,7 @@ This project follows a simple Git workflow:
 |--------|---------|
 | `main` | Stable releases only |
 | `dev`  | Active development / integration |
-| `feature/*` | Individual features branched from `dev` |
+| `feature/<name>` | Individual features branched from `dev` |
 
 ### Git commands to set up your `dev` branch
 
