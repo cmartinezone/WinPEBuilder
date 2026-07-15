@@ -74,9 +74,78 @@ WinPEBuilder
 │
 ├── Add-Drivers      # Drivers injected into the WinPE image
 ├── Add-Scripts      # Files copied to %SystemRoot%\System32
-├── WinPE-ISO        # Generated WinPE_X64.iso
-└── WinPE-Root       # Temporary WinPE mount directory
-````
+├── Add-Updates      # Windows update packages (.msu / .cab) to inject
+├── Tests            # Pester tests for project structure validation
+├── WinPE-ISO        # Generated WinPE_X64.iso (output)
+└── WinPE-Root       # Temporary WinPE mount directory (auto-managed)
+```
+
+---
+
+# 🌿 Branching Strategy
+
+This project follows a simple Git workflow:
+
+| Branch | Purpose |
+|--------|---------|
+| `main` | Stable releases only |
+| `dev`  | Active development / integration |
+| `feature/*` | Individual features branched from `dev` |
+
+### Git commands to set up your `dev` branch
+
+```bash
+# Clone the repository
+git clone https://github.com/cmartinezone/WinPEBuilder.git
+cd WinPEBuilder
+
+# Create and switch to the dev branch
+git checkout -b dev
+
+# Push dev branch to remote (first time)
+git push -u origin dev
+```
+
+### Typical feature workflow
+
+```bash
+# Start a new feature from dev
+git checkout dev
+git pull origin dev
+git checkout -b feature/my-new-feature
+
+# ... make changes ...
+git add .
+git commit -m "feat: describe your change"
+
+# Merge back into dev when ready
+git checkout dev
+git merge feature/my-new-feature
+git push origin dev
+```
+
+When `dev` is stable and tested, merge it into `main` and tag a release:
+
+```bash
+git checkout main
+git merge dev
+git tag -a v1.2 -m "Release v1.2"
+git push origin main --tags
+```
+
+---
+
+# 🧪 Running Tests
+
+Tests use [Pester](https://pester.dev/) (PowerShell testing framework).
+
+```powershell
+# Install Pester (once)
+Install-Module -Name Pester -Force -Scope CurrentUser
+
+# Run all tests
+Invoke-Pester .\Tests\WinPEBuilder.Tests.ps1 -Output Detailed
+```
 
 ---
 

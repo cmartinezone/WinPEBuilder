@@ -1,4 +1,24 @@
 
-WinPEBuilder1.1.zip
-WinPE_X64.iso
+# Build artifacts
+WinPE-ISO/*.iso
+*.iso
+*.zip
+
+# Temporary WinPE mount directory contents (keep the folder, ignore contents)
+WinPE-Root/*
+!WinPE-Root/info.txt
+
+# Legacy / local helper scripts
 SetDirectories.ps1
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# PowerShell / editor
+*.psm1.bak
+.vscode/
+.vs/
+
+# Pester test results
+TestResults.xml

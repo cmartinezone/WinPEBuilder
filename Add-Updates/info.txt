@@ -1,0 +1,2 @@
+Place Windows cumulative update packages (.msu or .cab) in this folder.
+They will be injected into the WinPE image during the build process.
