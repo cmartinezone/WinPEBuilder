@@ -1,0 +1,1 @@
+Place .inf driver packages here (subfolders OK). Applied on -Build with Add-WindowsDriver -Recurse.

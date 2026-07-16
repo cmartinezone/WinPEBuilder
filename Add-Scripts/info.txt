@@ -1,0 +1,1 @@
+Place startnet.cmd, winpe.jpg, unattend.xml, or use System32\, Root\, and Media\ subfolders for structured copy.

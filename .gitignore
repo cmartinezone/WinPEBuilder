@@ -1,0 +1,33 @@
+# Build artifacts
+WinPE-ISO/*.iso
+*.iso
+*.zip
+
+# Temporary WinPE mount directory contents (keep the folder, ignore contents)
+WinPE-Root/*
+!WinPE-Root/info.txt
+
+# Nested workdirs if created
+WinPE_amd64/
+WinPE_x86/
+WinPE_arm64/
+
+# Logs
+Logs/*.log
+
+# Legacy / local helper scripts
+SetDirectories.ps1
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# PowerShell / editor
+*.psm1.bak
+.vscode/
+.vs/
+.atl/
+.opencode/
+
+# Pester test results
+TestResults.xml
