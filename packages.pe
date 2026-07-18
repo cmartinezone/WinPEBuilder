@@ -1,0 +1,45 @@
+# packages.pe - WinPE optional components for this project
+# Uncomment a line to install it. Order = install order.
+# Docs: https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference
+#
+# Usage:
+#   .\WinPE-Builder.ps1 -Build -ISO -Force -AddPackage packages.pe
+#
+# Language packs under WinPE_OCs/<lang>/ are added automatically when present.
+
+# Default Components
+WinPE-WMI
+WinPE-NetFx
+WinPE-Scripting
+WinPE-PowerShell
+WinPE-DismCmdlets
+WinPE-StorageWMI
+WinPE-SecureBootCmdlets
+WinPE-HTA
+WinPE-FMAPI
+WinPE-SecureStartup
+WinPE-EnhancedStorage
+
+# Optional Components
+# WinPE-Dot3Svc
+# WinPE-Fonts-Legacy
+# WinPE-FontSupport-JA-JP
+# WinPE-FontSupport-KO-KR
+# WinPE-FontSupport-WinRE
+# WinPE-FontSupport-ZH-CN
+# WinPE-FontSupport-ZH-HK
+# WinPE-FontSupport-ZH-TW
+# WinPE-GamingPeripherals
+# WinPE-HSP-Driver
+# WinPE-LegacySetup
+# WinPE-MDAC
+# WinPE-PlatformId
+# WinPE-PmemCmdlets
+# WinPE-PPPoE
+# WinPE-RNDIS
+# WinPE-Setup
+# WinPE-Setup-ASZ
+# WinPE-Setup-Client
+# WinPE-Setup-Server
+# WinPE-WDS-Tools
+# WinPE-WinReCfg

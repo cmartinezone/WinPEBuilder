@@ -1,33 +1,65 @@
-# Build artifacts
-WinPE-ISO/*.iso
+# =============================================================================
+# WinPE Builder 2.0 — GitHub vs local
+# =============================================================================
+# Git cannot store empty folders. Pattern used below:
+#   Folder/*          ignore everything inside
+#   !Folder/.gitkeep  keep a marker so the folder is pushed
+# Add-Scripts is NOT content-ignored — script files are shipped.
+# =============================================================================
+
+# --- Not shipped (local host prototypes) ---
+# Engine is WinPE-Builder.ps1 only.
+Tests/
+UI/
+Core/
+backup/
+.backup/
+
+# --- Project folders: ignore contents, keep folder on GitHub ---
+Add-Drivers/*
+!Add-Drivers/.gitkeep
+
+Add-Updates/*
+!Add-Updates/.gitkeep
+
+WinPE-ISO/*
+!WinPE-ISO/.gitkeep
+
+WinPE-Logs/*
+!WinPE-Logs/.gitkeep
+
+WinPE-Root/*
+!WinPE-Root/.gitkeep
+
+# Add-Scripts: track all content (startnet.cmd, tools, etc.)
+# (no Add-Scripts/* rule)
+
+# --- Build / media artifacts anywhere ---
 *.iso
 *.zip
+*.wim
 
-# Temporary WinPE mount directory contents (keep the folder, ignore contents)
-WinPE-Root/*
-!WinPE-Root/info.txt
-
-# Nested workdirs if created
+# --- Nested / local project workdirs ---
 WinPE_amd64/
 WinPE_x86/
 WinPE_arm64/
+test-pe/
+test-winpe/
+MyWinPE-Project/
 
-# Logs
-Logs/*.log
+# --- Logs by name (safety net; folder content already ignored above) ---
+*.log
 
-# Legacy / local helper scripts
+# --- Local helpers / editor ---
 SetDirectories.ps1
-
-# Windows
 Thumbs.db
 Desktop.ini
-
-# PowerShell / editor
 *.psm1.bak
 .vscode/
 .vs/
 .atl/
 .opencode/
+.codegraph/
 
-# Pester test results
+# --- Test harness output ---
 TestResults.xml
