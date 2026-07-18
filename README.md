@@ -11,7 +11,7 @@
 **WinPE Builder 2.0** automates creating a WinPE image with essential optional components, drivers, scripts, updates, and an ISO or USB — ideal for deployment, recovery, and troubleshooting media.
 
 ```text
-Init project  →  Add drivers / scripts / packages  →  Build ISO or USB
+Init project  →  Add drivers / scripts / updates / packages  →  Build ISO or USB
 ```
 
 > **Version 2.0** — project-based workflow, `packages.pe` control, Secure Boot options (PCA 2011 / PCA 2023).
