@@ -873,6 +873,20 @@ function Add-OptionalPackages {
         }
     }
 
+    # The ADK boot.wim is en-us by default. Other languages need their base
+    # WinPE language pack before localized optional-component packages and
+    # before Set-AllIntl runs later in the build.
+    if ($Language -ne 'en-us') {
+        $langRoot = Join-Path $OcRoot $Language
+        $mainLanguageCab = Join-Path $langRoot 'lp.cab'
+        if (-not (Test-Path -LiteralPath $mainLanguageCab -PathType Leaf)) {
+            throw "Main WinPE language pack not found: $mainLanguageCab"
+        }
+
+        Write-Log "Adding main language pack: $Language" -Level Info
+        Add-WindowsPackage -Path $MountPath -PackagePath $mainLanguageCab -ErrorAction Stop | Out-Null
+    }
+
     if ($list.Count -eq 0) { return 0 }
 
     Write-Log "Adding $($list.Count) package(s)..." -Level Step
