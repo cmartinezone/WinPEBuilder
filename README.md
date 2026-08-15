@@ -326,7 +326,7 @@ Same PowerShell window keeps the project path after `-Init` or `-WorkDirectory`.
 | [Simple guide](_docs/SIMPLE-GUIDE.md) | Full first-project walkthrough |
 | [Common uses](_docs/COMMON-USES.md) | Short recipes |
 | [Usage reference](_docs/USAGE.md) | Every switch and option |
-| [Improvements backlog](IMPROVEMENTS.md) | Ideas we can improve next |
+| [Improvements](IMPROVEMENTS.md) | Small ideas to improve next |
 
 ---
 
